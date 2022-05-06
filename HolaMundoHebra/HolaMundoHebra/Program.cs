@@ -11,18 +11,29 @@ namespace HolaMundoHebra
     {
         static void ejecutar()
         {
-            for (int i=0; i<10; i++)
-            {
-                Console.WriteLine("Hola desde hebra {0}", i);
-                Thread.Sleep(1000);
-            }
+                int i = Convert.ToInt32(Thread.CurrentThread.Name);
+                Thread.Sleep(i * 1000);
+                Console.WriteLine("Hola desde {0}", i);
         }
         static void Main(string[] args)
         {
-            Console.WriteLine("Esto esta antes de la hebra");
-            Thread t = new Thread(new ThreadStart(ejecutar));
-            t.Start();
-            Console.WriteLine("Esto se esta ejecutando despues de la hebra");
+            /* Console.WriteLine("Esto esta antes de la hebra");
+             Thread t = new Thread(new ThreadStart(ejecutar));
+             t.Name = "Hebra de Cristian";
+             t.Start();
+             Thread t2 = new Thread(new ThreadStart(ejecutar));
+             t2.Name = "Hebra de Maria";
+             t2.Start();
+            */
+            Console.WriteLine("Iniciando Hebras");
+            for (int i=1; i<7; i++)
+            {
+                Thread t = new Thread(new ThreadStart(ejecutar));
+                t.Name = i.ToString();
+                t.IsBackground = false;
+                t.Start();
+            }
+            Console.WriteLine("Hebras iniciadas");
             Console.ReadKey();
         }
     }

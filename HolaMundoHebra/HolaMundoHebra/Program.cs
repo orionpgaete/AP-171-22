@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HolaMundoHebra.Hebras;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,13 @@ namespace HolaMundoHebra
                 Thread.Sleep(i * 1000);
                 Console.WriteLine("Hola desde {0}", i);
         }
+
+        static void ejecutarConParametro(object o)
+        {
+            int i = (int)o;
+            Thread.Sleep(i * 1000);
+            Console.WriteLine("Hola desde {0}", i);
+        }
         static void Main(string[] args)
         {
             /* Console.WriteLine("Esto esta antes de la hebra");
@@ -28,7 +36,9 @@ namespace HolaMundoHebra
             Console.WriteLine("Iniciando Hebras");
             for (int i=1; i<7; i++)
             {
-                Thread t = new Thread(new ThreadStart(ejecutar));
+                HebraEjercicio he = new HebraEjercicio(i);
+
+                Thread t = new Thread(new ThreadStart(he.ejecutar));
                 t.Name = i.ToString();
                 t.IsBackground = false;
                 t.Start();

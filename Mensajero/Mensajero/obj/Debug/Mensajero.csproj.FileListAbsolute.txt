@@ -8,3 +8,5 @@ C:\Users\Orion\source\repos\orionpgaete\AP-171-22\Mensajero\Mensajero\obj\Debug\
 C:\Users\Orion\source\repos\orionpgaete\AP-171-22\Mensajero\Mensajero\obj\Debug\Mensajero.csproj.CopyComplete
 C:\Users\Orion\source\repos\orionpgaete\AP-171-22\Mensajero\Mensajero\obj\Debug\Mensajero.exe
 C:\Users\Orion\source\repos\orionpgaete\AP-171-22\Mensajero\Mensajero\obj\Debug\Mensajero.pdb
+C:\Users\Orion\source\repos\orionpgaete\AP-171-22\Mensajero\Mensajero\bin\Debug\ServerSocketUtils.dll
+C:\Users\Orion\source\repos\orionpgaete\AP-171-22\Mensajero\Mensajero\bin\Debug\ServerSocketUtils.pdb

@@ -1,8 +1,11 @@
 ﻿using MensajeroModel.DAL;
 using MensajeroModel.DTO;
+using ServerSocketUtils;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
+using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -30,8 +33,47 @@ namespace Mensajero
             }
             return continuar;
         }
+
+        static void IniciarServidor()
+        {
+            int puerto = Convert.ToInt32(ConfigurationManager.AppSettings["puerto"]);
+            ServerSocket servidor = new ServerSocket(puerto);
+            Console.WriteLine("S: Lenvantando servidor en puerto {0}", puerto);
+            if (servidor.Iniciar())
+            {
+                while (true)
+                {
+                    Console.WriteLine("S: Espetando Cliente..");
+                    Socket cliente = servidor.ObtenerCliente();
+                    Console.WriteLine("S: cliente recibido");
+                    ClienteCom clienteCom = new ClienteCom(cliente);
+
+                    clienteCom.Escribir("Ingrese nombre : ");
+                    string nombre = clienteCom.Leer();
+                    clienteCom.Escribir("Ingrese texto");
+                    string texto = clienteCom.Leer();
+                    Mensaje mensaje = new Mensaje()
+                    {
+                        Nombre = nombre,
+                        Texto = texto,
+                        Tipo = "TCP"
+                    };
+                    mensajesDAL.AgregarMensaje(mensaje);
+                    clienteCom.Desconectar();
+                }
+            }
+            else
+            {
+                Console.WriteLine("Fail, no se puede levantar server en {0}", puerto);
+            }
+        }
         static void Main(string[] args)
         {
+            // 1. Iniciar el servidor en el puerto 3000
+            //2. el puerto tiene que ser configurable App.confing
+            //3. cuando reciba un cliente, tiene que solicitar a ese cliente el nombre y el texto,
+            // y agregar un nuevo mensaje con el tipo TCP
+            IniciarServidor();
             while (Menu()) ;
         }
 

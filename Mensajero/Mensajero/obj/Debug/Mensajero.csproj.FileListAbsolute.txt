@@ -1,0 +1,10 @@
+C:\Users\Orion\source\repos\orionpgaete\AP-171-22\Mensajero\Mensajero\bin\Debug\Mensajero.exe.config
+C:\Users\Orion\source\repos\orionpgaete\AP-171-22\Mensajero\Mensajero\bin\Debug\Mensajero.exe
+C:\Users\Orion\source\repos\orionpgaete\AP-171-22\Mensajero\Mensajero\bin\Debug\Mensajero.pdb
+C:\Users\Orion\source\repos\orionpgaete\AP-171-22\Mensajero\Mensajero\bin\Debug\MensajeroModel.dll
+C:\Users\Orion\source\repos\orionpgaete\AP-171-22\Mensajero\Mensajero\bin\Debug\MensajeroModel.pdb
+C:\Users\Orion\source\repos\orionpgaete\AP-171-22\Mensajero\Mensajero\obj\Debug\Mensajero.csprojAssemblyReference.cache
+C:\Users\Orion\source\repos\orionpgaete\AP-171-22\Mensajero\Mensajero\obj\Debug\Mensajero.csproj.CoreCompileInputs.cache
+C:\Users\Orion\source\repos\orionpgaete\AP-171-22\Mensajero\Mensajero\obj\Debug\Mensajero.csproj.CopyComplete
+C:\Users\Orion\source\repos\orionpgaete\AP-171-22\Mensajero\Mensajero\obj\Debug\Mensajero.exe
+C:\Users\Orion\source\repos\orionpgaete\AP-171-22\Mensajero\Mensajero\obj\Debug\Mensajero.pdb

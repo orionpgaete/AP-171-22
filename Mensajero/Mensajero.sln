@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mensajero", "Mensajero\Mens
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MensajeroModel", "MensajeroModel\MensajeroModel.csproj", "{6ECA6D42-0F84-4E81-91BD-54C9212D03A2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServerSocketUtils", "..\..\TIDC11-T60-170\EjercicioSocket\ServerSocketUtils\ServerSocketUtils.csproj", "{9645DABC-566B-4FE3-A0E4-B566E39CD2EC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServerSocketUtils", "ServerSocketUtils\ServerSocketUtils.csproj", "{9645DABC-566B-4FE3-A0E4-B566E39CD2EC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

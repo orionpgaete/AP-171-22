@@ -12,8 +12,22 @@ namespace StarCapWeb
     public partial class Default : System.Web.UI.Page
     {
         private IClientesDAL clienteDAL = new ClientesDALObjetos();
+        private IBebidasDAL bebidasDAL = new BebidasDALObjetos();
+
         protected void Page_Load(object sender, EventArgs e)
         {
+            //este metodo se ejecuta cuando se carga el form y puede ser:
+            // Cuando es una peticion GET (!PostBack)
+            // Cuando es una peticion POST (PostBack)
+            if (!IsPostBack)
+            {
+                //aqui cargo la lista del dropdown
+                List<Bebida> bebidas = bebidasDAL.ObtenerBebidas();
+                this.bebidaDdl.DataSource = bebidas;
+                this.bebidaDdl.DataTextField = "Nombre";
+                this.bebidaDdl.DataValueField = "Codigo";
+                this.bebidaDdl.DataBind();
+            }
 
         }
 
@@ -46,6 +60,7 @@ namespace StarCapWeb
             clienteDAL.Agregar(cliente);
             //4. Mostrar mensaje de exito
             this.mensajeslbl.Text = "Cliente Ingresado";
+            Response.Redirect("VerCliente.aspx");
 
         }
     }

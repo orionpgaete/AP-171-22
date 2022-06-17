@@ -13,5 +13,7 @@ namespace StarCapModel.DAL
 
         void Eliminar(string rut);
 
+        List<Cliente> Filtrar(int nivel);
+
     }
 }
